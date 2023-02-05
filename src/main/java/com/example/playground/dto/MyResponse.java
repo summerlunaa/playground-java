@@ -11,5 +11,10 @@ import lombok.extern.jackson.Jacksonized;
 @Builder
 @FieldDefaults(makeFinal = true, level = AccessLevel.PRIVATE)
 public class MyResponse {
+    @Getter(AccessLevel.NONE)
     boolean isGood;
+
+    public Boolean getIsGood() {
+        return isGood;
+    }
 }
